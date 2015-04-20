@@ -1,16 +1,22 @@
 [user] 
     name = songchao
-    email = songchao.buaa@foxmail.com
+    email = songchao@meican.com
 [alias]
     st = status
     co = checkout
-    br = branch
-    up = rebase
     ci = commit -a -v
 [core]
     editor = vim
+    autocrlf = input
+    excludesfile = /Users/song/.gitignore_global
 [color]
     ui = true
 [push]
     default = current
 
+[difftool "sourcetree"]
+   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
